@@ -1,0 +1,68 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="idPatient">
+    <th mat-header-cell *matHeaderCellDef> # IDENTIFICACION</th>
+    <td mat-cell *matCellDef="let element"> {{element.idPatient}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fullName">
+    <th mat-header-cell *matHeaderCellDef> NOMBRE PACIENTE </th>
+    <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="age">
+    <th mat-header-cell *matHeaderCellDef> EDAD </th>
+    <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="gender">
+    <th mat-header-cell *matHeaderCellDef> GENERO </th>
+    <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="symptom">
+    <th mat-header-cell *matHeaderCellDef> SINTOMAS </th>
+    <td mat-cell *matCellDef="let element"> {{element.symptom}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idTriage">
+    <th mat-header-cell *matHeaderCellDef> TRIAGE </th>
+    <td mat-cell *matCellDef="let element"> {{element.idTriage}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idSurgery">
+    <th mat-header-cell *matHeaderCellDef> # CONSULTORIO </th>
+    <td mat-cell *matCellDef="let element"> {{element.idSurgery}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="surgeryName">
+    <th mat-header-cell *matHeaderCellDef> NOMBRE CONSULTORIO </th>
+    <td mat-cell *matCellDef="let element"> {{element.surgeryName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nameDoctor">
+    <th mat-header-cell *matHeaderCellDef> NOMBRE DOCTOR</th>
+    <td mat-cell *matCellDef="let element"> {{element.nameDoctor}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="registrationDate">
+    <th mat-header-cell *matHeaderCellDef> FECHA Y HORA DE INGRESO </th>
+    <td mat-cell *matCellDef="let element"> {{element.registrationDate |date:"medium" }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="diagnostic">
+    <th mat-header-cell *matHeaderCellDef> DIAGNOSTICO </th>
+    <td mat-cell *matCellDef="let element"> {{element.diagnostic}} </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+table {
+  padding: 20px;
+  width: 100%;
+}
+
+.mat-header-cell{
+  text-align: center;
+  border-right: 1px solid currentColor;
+  background-color: blue;
+  color: white;
+}
+
+.mat-cell{
+  border-right: 1px solid currentColor;
+  text-align: center;
+  color: blue;
+}
